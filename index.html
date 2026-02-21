@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metallica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+  <!-- Header + Navigation -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="На початок сторінки">METALLICA</a>
+
+      <nav class="nav" aria-label="Головне меню">
+        <a class="nav__link" href="#home">Головна</a>
+        <a class="nav__link" href="#about">Про групу</a>
+        <a class="nav__link" href="#albums">Альбоми</a>
+      </nav>
+
+      <a class="header__login" href="login.html">Увійти</a>
+    </div>
+  </header>
+
+  <!-- Hero / Home -->
+  <main>
+    <section class="hero" id="home" aria-label="Головна секція">
+      <!-- overlay для затемнення фону (зробимо в CSS) -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <h1 class="hero__title">Metallica</h1>
+        <p class="hero__subtitle">Фан-сайт легендарного гурту. Новини, факти та альбоми — в одному місці.</p>
+
+        <p class="hero__note">Щоб слухати — авторизуйтесь</p>
+
+        <div class="hero__actions">
+          <a class="btn" href="login.html">Авторизація</a>
+          <a class="btn btn--secondary" href="#about">Дізнатись більше</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-label="Про групу">
+      <div class="container">
+        <h2 class="section__title">Про групу</h2>
+
+        <p class="text">
+          Metallica — американський гурт у жанрі хеві-метал, який став одним із найвпливовіших у світовій рок-музиці.
+          На цьому фан-сайті ми зібрали коротку довідку, добірку альбомів і зручну навігацію.
+        </p>
+
+        <div class="facts">
+          <article class="fact">
+            <h3 class="fact__title">Стиль</h3>
+            <p class="fact__text">Потужні рифи, швидкий темп, енергія та впізнаваний звук.</p>
+          </article>
+
+          <article class="fact">
+            <h3 class="fact__title">Що тут буде</h3>
+            <p class="fact__text">Опис гурту, список альбомів і доступ до контенту після входу.</p>
+          </article>
+
+          <article class="fact">
+            <h3 class="fact__title">Навігація</h3>
+            <p class="fact__text">Меню зверху веде до розділів сторінки через якорні посилання.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Albums -->
+    <section class="section" id="albums" aria-label="Альбоми">
+      <div class="container">
+        <h2 class="section__title">Альбоми</h2>
+        <p class="text">
+          Нижче — приклад блоку з альбомами. Пізніше можна доповнити обкладинками, роками, треклістом і кнопками “слухати”.
+        </p>
+
+        <div class="albums">
+          <article class="album">
+            <h3 class="album__title">Master of Puppets</h3>
+            <p class="album__meta">Класика треш-металу</p>
+          </article>
+
+          <article class="album">
+            <h3 class="album__title">…And Justice for All</h3>
+            <p class="album__meta">Темніший звук і складні композиції</p>
+          </article>
+
+          <article class="album">
+            <h3 class="album__title">Metallica (The Black Album)</h3>
+            <p class="album__meta">Найвідоміший альбом для широкої аудиторії</p>
+          </article>
+        </div>
+
+        <div class="section__actions">
+          <a class="btn" href="login.html">Увійти, щоб слухати</a>
+          <a class="btn btn--secondary" href="#top">На початок</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Metallica Fan Site • 2026 • Гетьманенко Андрій</p>
+      <a class="footer__link" href="#top">↑ Вгору</a>
+    </div>
+  </footer>
+
+</body>
+</html>

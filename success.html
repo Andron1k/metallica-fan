@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Успішний вхід | Metallica Fan Site</title>
+  <link rel="stylesheet" href="success.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Повернутися на головну">METALLICA</a>
+
+      <nav class="nav" aria-label="Меню">
+        <a class="nav__link" href="index.html#home">Головна</a>
+        <a class="nav__link" href="index.html#about">Про групу</a>
+        <a class="nav__link" href="index.html#albums">Альбоми</a>
+      </nav>
+
+      <a class="header__login" href="login.html">Змінити користувача</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="success" aria-label="Успішний вхід">
+      <div class="success__overlay" aria-hidden="true"></div>
+
+      <div class="container success__content">
+        <div class="card">
+          <div class="badge">ACCESS GRANTED</div>
+
+          <h1 class="title" id="welcomeMessage">...</h1>
+
+          <p class="subtitle">
+            Вхід успішний. Можна повертатися на головну сторінку та переходити до розділів сайту.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="index.html#albums">Перейти до альбомів</a>
+            <a class="btn btn--secondary" href="index.html">На головну</a>
+          </div>
+
+          <p class="hint">
+            Якщо ти бачиш “Помилка входу” — повернись на
+            <a class="hint__link" href="login.html">сторінку авторизації</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Metallica Fan Site • 2026 • Гетьманенко Андрій</p>
+      <a class="footer__link" href="index.html">← На головну</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

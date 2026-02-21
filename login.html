@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авторизація | Metallica Fan Site</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Повернутися на головну">METALLICA</a>
+
+      <nav class="nav" aria-label="Меню">
+        <a class="nav__link" href="index.html#home">Головна</a>
+        <a class="nav__link" href="index.html#about">Про групу</a>
+        <a class="nav__link" href="index.html#albums">Альбоми</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="login" aria-label="Секція авторизації">
+      <div class="login__overlay" aria-hidden="true"></div>
+
+      <div class="container login__content">
+        <div class="card">
+          <h1 class="card__title">Авторизація</h1>
+          <p class="card__subtitle">
+            Введіть логін і пароль, щоб продовжити.
+          </p>
+
+          <form class="form" id="loginForm" autocomplete="off">
+            <label class="field">
+              <span class="field__label">Логін</span>
+              <input class="field__input" id="login" name="login" type="text" placeholder="Введіть логін" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Пароль</span>
+              <input class="field__input" id="password" name="password" type="password" placeholder="Введіть пароль" required />
+            </label>
+
+            <button class="btn" type="submit">Увійти</button>
+
+            <p class="hint">
+              Повернутися на <a class="hint__link" href="index.html">головну сторінку</a>.
+            </p>
+
+            <p class="error" id="errorMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">Metallica Fan Site • 2026 • Гетьманенко Андрій</p>
+      <a class="footer__link" href="index.html">← На головну</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
