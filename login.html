@@ -61,7 +61,19 @@
       <a class="footer__link" href="index.html">← На головну</a>
     </div>
   </footer>
+      <!-- Popup помилки входу -->
+    <div class="toast" id="loginToast" aria-hidden="true">
+      <div class="toast__body" role="alert" aria-live="assertive">
+        <div class="toast__icon" aria-hidden="true">!</div>
 
+        <div class="toast__content">
+          <p class="toast__title">Помилка входу</p>
+          <p class="toast__text" id="toastText">Неправильний логін. Спробуйте ще раз.</p>
+        </div>
+
+        <button class="toast__close" id="toastClose" type="button" aria-label="Закрити">×</button>
+      </div>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>

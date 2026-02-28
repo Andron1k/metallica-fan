@@ -1,7 +1,7 @@
 // ===== script.js =====
 
 // Дозволені користувачі
-const users = ["andriy", "maria", "serhii", "minecrafter", "juniorit", "aaa123", "mark", "danya", "egor", "sonya"];
+const users = ["andriy", "maria", "serhii", "minecrafter", "juniorit", "aaa123", "mark", "danya", "egor", "sonya", "glib", "kostya", "lyoha"];
 
 // Привітання для success.html
 const greetings = {
@@ -54,9 +54,54 @@ if (welcomeEl) {
     welcomeEl.textContent = greetings[currentUser];
 
     // 2) Фон (через клас на body)
-    document.body.classList.remove("bg-andriy", "bg-maria", "bg-serhii", "bg-minecrafter", "sonya");
+    document.body.classList.remove("bg-andriy", "bg-maria", "bg-serhii", "bg-minecrafter", "bg-sonya");
     document.body.classList.add(bgClasses[currentUser]);
   } else {
     welcomeEl.textContent = "Помилка входу";
   }
+}
+
+
+// ===== Popup (toast) для помилок на login.html =====
+const toast = document.getElementById("loginToast");
+const toastClose = document.getElementById("toastClose");
+const toastText = document.getElementById("toastText");
+
+function showToast(message) {
+  if (!toast || !toastText) return;
+
+  toastText.textContent = message;
+  toast.classList.add("is-open");
+  toast.setAttribute("aria-hidden", "false");
+
+  // Автоматично сховати через 3.5 секунди (можеш змінити)
+  clearTimeout(showToast._timer);
+  showToast._timer = setTimeout(hideToast, 3500);
+}
+
+function hideToast() {
+  if (!toast) return;
+  toast.classList.remove("is-open");
+  toast.setAttribute("aria-hidden", "true");
+}
+
+// Закриття по "×"
+if (toastClose) {
+  toastClose.addEventListener("click", hideToast);
+}
+
+// Закриття по ESC
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") hideToast();
+});
+
+// ✅ Підключаємо до твоєї існуючої логіки:
+// НЕ змінюємо твою перевірку, а просто "підсилюємо" повідомлення.
+if (form && loginInput && errorMessage) {
+  form.addEventListener("submit", function () {
+    // Якщо з’явилась помилка (ти вже ставиш "Помилка входу")
+    if (errorMessage.textContent && errorMessage.textContent.trim() !== "") {
+      showToast("Неправильний логін. Перевірте введення та спробуйте ще раз.");
+    }
+  });
 }

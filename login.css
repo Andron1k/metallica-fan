@@ -233,3 +233,121 @@ body {
 .footer__link:hover {
   background: rgba(255,255,255,0.10);
 }
+
+/* ===== Popup (toast) для помилки входу — БІЛЬШИЙ і ПОМІТНІШИЙ ===== */
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: min(720px, 94%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s, transform 0.22s;
+}
+
+.toast.is-open {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+  pointer-events: auto;
+}
+
+.toast__body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-radius: 18px;
+  padding: 18px 18px;
+
+  /* темніший фон + сильніший контраст */
+  background: rgba(0, 0, 0, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 26px 60px rgba(0, 0, 0, 0.75),
+    0 0 0 2px rgba(180, 0, 0, 0.35); /* червона "рамка" */
+
+  backdrop-filter: blur(12px);
+}
+
+/* велика "іконка-удар" */
+.toast__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 900;
+  font-size: 20px;
+  color: #ffffff;
+
+  background: linear-gradient(180deg, rgba(210,0,0,1), rgba(120,0,0,1));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 16px 30px rgba(0,0,0,0.55),
+    0 0 22px rgba(210, 0, 0, 0.35); /* glow */
+}
+
+.toast__content {
+  flex: 1;
+}
+
+.toast__title {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.toast__text {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+}
+
+/* велика, помітна кнопка закриття */
+.toast__close {
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+  cursor: pointer;
+
+  font-size: 24px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+.toast__close:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: scale(1.05);
+}
+
+/* На мобільних — ще більший відступ знизу, щоб не перекривало */
+@media (max-width: 520px) {
+  .toast {
+    bottom: 18px;
+  }
+
+  .toast__body {
+    padding: 16px;
+  }
+}
+
+
+
